@@ -117,8 +117,8 @@
   \\
   {\em #3} \hfill {\em #4} % Italic job title and location
   }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
-   \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+  \begin{list}{$\cdot$}{\leftmargin=0.75em} % \cdot used for bullets, no indentation
+   \itemsep -0.5em \vspace{-0.75em} % Compress items in list together for aesthetics
   }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
@@ -129,12 +129,16 @@
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
   {#3} \hfill {\em #4} % Italic job title and location
-  }\smallskip
-  \begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+  }
+  \begin{list}{$\cdot$}{\leftmargin=0.75em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
   }{
   \end{list}
   \vspace{0.5em} % Some space after the list of bullet points
+}
+
+\newenvironment{sSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
+ {\bf #1} {#3} {\em #4} \hfill {#2} % Bold company name and date on the right
 }
 
 % The below commands define the whitespace after certain things in the document - they can be \smallskip, \medskip or \bigskip
