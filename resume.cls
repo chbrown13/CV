@@ -125,10 +125,10 @@
 }
 
 \newenvironment{pSubsection}[4]{ % 4 input arguments - company name, year(s) employed, job title and location
- {\bf #1} \hfill {#2} % Bold company name and date on the right
+ {\em #1} \hfill {#2} % Bold company name and date on the right
  \ifthenelse{\equal{#3}{}}{}{ % If the third argument is not specified, don't print the job title and location line
   \\
-  {#3} \hfill {\em #4} % Italic job title and location
+  {#3} \hfill {\textsl{#4}} % Italic job title and location
   }
   \begin{list}{$\cdot$}{\leftmargin=0.75em} % \cdot used for bullets, no indentation
    \itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
