@@ -28,12 +28,37 @@
 \setlength{\parskip}{0.6em}
 \usepackage{ragged2e}
 \usepackage{xspace}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{etaremune}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{color,soul}
+\usepackage{hyperref}
+%\usepackage{academicons}
+%\fancypagestyle{CVfooter}
 \newcommand\blfootnote[1]{%
   \begingroup
   \renewcommand\thefootnote{}\footnote{#1}%
   \addtocounter{footnote}{-1}%
   \endgroup
 }
+
+\pagestyle{fancy}
+\fancyhf{} % sets both header and footer to nothing
+\renewcommand{\headrulewidth}{0pt}
+\lfoot{Chris Brown}
+\cfoot{}
+\rfoot{\thepage\ of \pageref{LastPage}
+ }
+\fancypagestyle{firstpage}{%
+\fancyhf{} 
+  \lfoot{\textbf{Dr.} \me}
+  \cfoot{\textit{Last Updated:} \today} %DATE
+  \rfoot{\thepage\ of \pageref{LastPage}}
+}
+ \renewcommand{\footrulewidth}{0.5pt}
+
 
 \name{\Large{Dwayne Christian Brown, Jr. (``Chris")}\\
     \small{Assistant Professor $|$ Department of Computer Science $|$ Virginia Tech}} 
@@ -50,7 +75,7 @@
 %----------------------------------------------------------------------------------------
 \vspace{-10pt}
 \begin{rSection}{Education}
-
+\thispagestyle{firstpage}
 {\bf North Carolina State University} \hfill {2015 - 2021} \\ 
 \textit{Ph.D.} in Computer Science \\
 Dissertation: \textit{Digital Nudges for Encouraging Developer Actions} \\
@@ -66,263 +91,405 @@ Advised by Dr. Chris Parnin
 {\bf Duke University} \hfill {2009 - 2013} \\ 
 \textit{B.S.} in Computer Science, with Distinction \\
 Minor in African and African American Studies
+
+\underline{\textsc{Additional Education}}\vspace{2.5pt}\\ 
+\begin{rSubsection}{North Carolina State University}{2019 - 2021}{Teaching and Communication Graduate Certificate}{}
+\end{rSubsection}
+
 \end{rSection}
 % \vspace{-5pt}
-%----------------------------------------------------------------------------------------
-%	PUBLICATIONS SECTION
-%----------------------------------------------------------------------------------------
-
-\begin{rSection}{Publications}
-\vspace{5pt}
-%------------------------------------------------
-\textbf{\underline{Conference Papers}}
-
-
-%------------------------------------------------
-\begin{pSubsection}{Understanding the Impact of GitHub Suggested Changes on Recommendations Between Developers}{}{\textit{\textbf{Chris Brown}}, Chris Parnin}{ESEC/FSE 2020}
-\item Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering
-\end{pSubsection}
-%------------------------------------------------
-\begin{pSubsection}{An Empirical Study on Regular Expression Bugs}{}{Peipei Wang, \textit{\textbf{Chris Brown}}, Jamie A. Jennings, Kathryn T. Stolee}{MSR 2020}
-\item International Conference on Mining Software Repositories
-\end{pSubsection}
-
-%------------------------------------------------
-\begin{pSubsection}{Mining Specifications from Documentation Using a Crowd}{}{Peng Sun, \textit{\textbf{Chris Brown}}, Ivan Beschastnikh, Kathryn T. Stolee}{SANER 2019}
-\item International Conference on Software Analysis, Evolution and Reengineering 
-\end{pSubsection}
-
-%------------------------------------------------
-
-\begin{pSubsection}{How Software Users Recommend Tools to Each Other}{}{\textit{\textbf{Chris Brown}}, Emerson Murphy-Hill, Justin Middleton, Esha Sharma}{VL/HCC 2017}
-\item Symposium on Visual Languages and Human-Centric Computing
-\end{pSubsection}
-
-%------------------------------------------------
-
-\begin{pSubsection}{Flower: Navigating Program Flow in the IDE}{}{Justin Smith, \textit{\textbf{Chris Brown}}, Emerson Murphy-Hill}{VL/HCC 2017}
-\item Symposium on Visual Languages and Human-Centric Computing
-\end{pSubsection}
-
-%------------------------------------------------
-
-\begin{pSubsection}{Weaving Computing into all Middle School Disciplines}{}{Susan H. Rodger, \textit{\textbf{Dwayne Brown}}, Michael Hoyle, Daniel MacDonald, Michael Marion, Elizabeth Onstwedder, Bella Onwumbiko, Edwin Ward}{ITiCSE 2014}
-\item Conference on Innovation and Technology in Computer Science Education
-\end{pSubsection}
-
-%------------------------------------------------
-\textbf{\underline{Workshops}}
-
-%------------------------------------------------
-\begin{pSubsection}{Dark Patterns for Influencing Developer Behavior}{}{\textit{\textbf{Chris Brown}}, Chris Parnin}{Dark Patterns 2021}
-\item What Can CHI Do About Dark Patterns? Workshop in conjuction with CHI
-\end{pSubsection}
-%------------------------------------------------
-\begin{pSubsection}{Nudging Students Toward Better Software Engineering Behaviors}{}{\textit{\textbf{Chris Brown}}, Chris Parnin}{BotSE 2021}
-\item International Workshop on Bots in Software Engineering in conjunction with ICSE
-\end{pSubsection}
-%------------------------------------------------
-\begin{pSubsection}{Sorry to Bother You Again: Developer Recommendation Choice Architectures for Designing Effective Bots}{}{\textit{\textbf{Chris Brown}}, Chris Parnin}{BotSE 2020}
-\item International Workshop on
-Bots in Software Engineering in conjunction with ICSE
-\end{pSubsection}
-%------------------------------------------------
-\begin{pSubsection}{Comparing Different Developer Behavior Recommendation Styles}{}{\textit{\textbf{Chris Brown}}, Chris Parnin}{CHASE 2020}
-\item International Workshop on Cooperative and Human Aspects of Software Engineering, in conjunction with ICSE
-\end{pSubsection} 
-%------------------------------------------------
-\begin{pSubsection}{Sorry to Bother You: Designing Bots for Effective Recommendations}{}{\textit{\textbf{Chris Brown}}, Chris Parnin}{BotSE 2019}
-\item International Workshop on
-Bots in Software Engineering in conjunction with ICSE
-\end{pSubsection}
-%------------------------------------------------
-\begin{pSubsection}{Experimenting with and Integrating Alice 2.3 into many disciplines (abstract only)}{}{Susan H. Rodger, Steve Cooper, Wanda Dann, \textit{\textbf{Dwayne C. Brown, Jr.}}, Jacobo Carrasquel}{\\ \hspace*{0.83\textwidth} SIGCSE 2013}
-\item Special Interest Group on Computer Science Education Technical Symposium
-\end{pSubsection}
-%------------------------------------------------
-\textbf{\underline{Doctoral Symposium}}
-
-\begin{pSubsection}{Digital Nudges for Encouraging Developer Actions}{}{\textit{\textbf{Chris Brown}}, Chris Parnin
-}{ICSE 2019}
-\item International Conference on Software Engineering
-\end{pSubsection}
-%------------------------------------------------
-\textbf{\underline{Poster}}
-
-\begin{pSubsection}{Integrating Computer Science into Middle School Mathematics}{}{Susan H. Rodger, \textit{\textbf{Dwayne C. Brown, Jr.}}, Michael Hoyle, Michael Marion}{SIGCSE 2013}
-\item Special Interest Group on Computer Science Education Technical Symposium
-\end{pSubsection}
-%------------------------------------------------
-\end{rSection}
 
 %----------------------------------------------------------------------------------------
 %	WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Industry}
+\begin{rSection}{Employment History}
 
-\begin{rSubsection}{Red Hat}{Summer 2018}{Quality Engineering Intern}{Raleigh, NC}
-\item Verified bugs and automated tests with Python for the robottelo test suite for Red Hat Satellite 6
-\item Explored Federal Information Processing Standards (FIPS) compatibility for Satellite 6
- \item Created Ansible roles to automatically test and install Red Hat Satellite
+\begin{rSubsection}{Virginia Polytechnic Institute and State University (Virginia Tech)}{Blacksburg, VA}{Assistant Professor, Fall 2021 - present}{}
 \end{rSubsection}
-\vspace{-5pt}
 
-\begin{rSubsection}{Red Hat}{Summer 2017}{Quality Engineering Intern}{Raleigh, NC}
-\item Verified bugs and automated tests with Python for the robottelo test suite for Red Hat Satellite 6
-\item Implemented satellite-populate to configure and robottelo tests with Docker using YAML files}
+\begin{rSubsection}{North Carolina State University (NC State)}{Raleigh, NC}{Research Assistant, Fall 2016 - Spring 2021\newline Teaching Assistant, Fall 2015 - Spring 2016}{}
 \end{rSubsection}
-\vspace{-5pt}
 
-\begin{rSubsection}{Blackbaud}{Summer 2016}{Software Quality Engineer Intern}{Charleston, SC}
-    \item Fixed C\# bugs and verified test cases for Online Express and Sky Email
-    \item Improved Givalanche API Documentation with Swagger and the Blackbaud Stache framework
-    \item Constructed a dashboard to monitor the status of Online Express using AppDynamics
+\begin{rSubsection}{Red Hat}{Raleigh, NC}{Quality Engineering Intern, Summers 2017 and 2018}{}
 \end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+%\vspace{-5pt}
 
-\begin{rSubsection}{Bank of America}{July 2013 - July 2015}{Python Developer}{Charlotte, NC}
-\item  Developed, tested, and maintained Python code for the Manual Adjustment Tool application used internally at Bank of America
+\begin{rSubsection}{Blackbaud}{Charleston, SC}{Software Quality Engineer Intern, Summer 2016}{}
+\end{rSubsection}
+%\vspace{-5pt}
+
+\begin{rSubsection}{Bank of America}{Charlotte, NC}{Python Developer, July 2013 - July 2015}{}
 \end{rSubsection}
 
 \end{rSection}
+%----------------------------------------------------------------------------------------
+%	PUBLICATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Publications}
+\textit{My name is in bold, underlined names are students directly supervised by me. A publication list is also available on \href{https://scholar.google.com/citations?hl=en\&user=MmgiKNkAAAAJ\&view_op=list_works\&authuser=1\&gmla=AJsN-F78_HJ89LDIopy2rAQwWOkF_D8aDZ4dGsFilA7BpNCva8nj8QOzFJG1H_1kyk0-EYHSBgHrKWtEx9OmEsMZNOix11gDuFgjgbvfCIE_xP_whZAtBW8}{Google Scholar}.} %  
+
+
+%------------------------------------------------
+\textbf{Journal Publications}
+
+\begin{enumerate}[{start=3,label=[J\arabic*]\addtocounter{enumi}{-2}}]
+    \item Kashumi Madampe and John Grundy and Judith Good and Dulaji Hidellaarachchi and J\'{a}come Cunha and \me and Peng Kuang and Reham Al Tamime and Ariful Islam Anik and Advait Sarkar and Wei Zhou and \underline{Shawal Khalid} and Tommaso Turchi and Shavindra Wickramathilaka and Yue Jiang. \textit{Addressing the Agony of Recruitment for Human-centric Computing Studies}. ACM Special Interest Group on Software Engineering (SIGSOFT) Software Engineering Notes. \url{https://doi.org/10.1145/3721890.3721898}
+    \item Sonja Hyrynnerlmi, Sebastian Baltes, \me, Rafael Prikladnicki, Gema Rodríguez-Pérez, Jocelyn Simmonds, Bianca Trinkenreich, Yi Wang, and Grischa Liebel. \textit{Making Software Development More Diverse and Inclusive: Key Themes, Challenges, and Future Directions}. ACM Transactions on Software Engineering and Methodology (TOSEM), Special Issue: ``A 2030 Roadmap for Software Engineering''. [\url{https://doi.org/10.1145/3711904}]
+    \item Peipei Wang, \me, Jamie A. Jennings, Kathryn T. Stolee. \textit{Demystifying Regular Expression Bugs: A comprehensive study on regular expression bug causes, fixes, and testing}. Empirical Software Engineering (EMSE 2022). [\url{https://doi.org/10.1007/s10664-021-10033-1}]
+\end{enumerate}
+
+%------------------------------------------------
+\textbf{Conference Publications}
+
+\begin{enumerate}[{start=35,label=[C\arabic*]\addtocounter{enumi}{-2}}]
+    \item  Taufiq Daryanto, Sophia Stil, Xiaohan Ding, Daniel Manesh, Sang Won Lee, Tim Lee, Stephanie Lunn, Sarah Rodriguez, \me and Eugenia Rho. \textit{Designing Conversational AI to Support Think-Aloud Practice in Technical Interview Preparation for CS Students}. IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2025). [31\% acceptance rate].
+    \item \underline{Minhyuk Ko}, \ul{Omer Ahmed}, \ul{Yoseph Berhanu Alebachew}, \me. \textit{AutoPrint: Judging the Effectiveness of An Automatic Print Statement Debugging Tool}. IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2025). [\textit{short paper}, 37\% acceptance rate]
+    \item \underline{Huayu Liang}, \ul{Syeda Afia Hossain}, and \me. \textit{Understanding User and Developer Perceptions of and Responses to Dark Patterns in Online UIs}. IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2025). [\textit{short paper}, 37\% acceptance rate]
+    \item \underline{Minhyuk Ko}, Mohammed Seyam, and \me. \textit{Programmers Without Borders: Bridging Cultures in Computer Science Study Abroad Program}. IEEE Symposium on Visual Languages and Human-Centric Computing (VL/HCC 2025). [\textit{short paper}, 37\% acceptance rate]
+    \item \me, \underline{Jason Cusati}. \textit{Exploring the Evidence-Based SE Beliefs of Generative AI Tools}. ACM/IEEE International Symposium on Empirical Software Engineering and Measurement (ESEM) Emerging Results and Vision track. [30\% acceptance rate]
+    \item \underline{Xiaoxiao Gan}, \me. \textit{Exploring the Impact of Integrating UI Testing in CI/CD Workflows on GitHub}. International Conference on Mining Software Repositories (MSR) Registered Report track. \url{https://arxiv.org/pdf/2504.19335}
+    \item \underline{Tianjia Wang}, \underline{Matthew Trimble}, \me. \textit{DevCoach: Supporting Students Learning the Software Development Life Cycle with a Generative AI powered Multi-Agent System}. Foundations of Software Engineering Software Engineering Education Track (FSE SEET 2025). [37\% acceptance rate] \url{https://doi.org/10.1145/3696630.3727255}
+    \item \underline{Brian Bell}, Teresa Thomas, Sang Won Lee, \me. \textit{How do Software Engineering Candidates Prepare for Technical Interviews?}. Foundations of Software Engineering Software Engineering Education Track (FSE SEET 2025). [37\% acceptance rate] \url{https://doi.org/10.1145/3696630.3727245}
+    \item \underline{Yoseph Berhanu Alebachew}, \underline{Minhyuk Ko}, \me. \textit{Are We on the Same Page? Examining Developer Perception Alignment in Open Source Code Reviews}. International Conference on Evaluation and Assessment in Software Engineering (EASE 2025). [27\% acceptance rate]
+    \item  \underline{Dibyendu Brinto Bose}, \underline{Travis Chan}, \underline{Matthew Trimble}, \me. ``\textit{AutoPyDep: A Recommendation System for Python Dependency Management Utilizing Graph-Based Analytics}''. Foundations of Software Engineering (FSE 2025) Tool Demonstration track. \url{https://doi.org/10.1145/3696630.3728576}
+    \item \underline{Swanand Vaishampayan}, \underline{Hunter Leary}, \underline{Yoseph Berhanu Alebachew}, Louis Hickman, Brent Stevenor, Fletcher Wimbush, Weston Beck, \me. \textit{Human and LLM-Based Resume Matching: An Observational Study}. Annual Conference of the Nations of the Americas Chapter of the Association for Computational Linguistics (NAACL 2025). [15\% acceptance rate] \url{https://aclanthology.org/2025.findings-naacl.270/}
+    \item \underline{Swanand Vaishampayan}, \me. \textit{Will You Trust Me More Than ChatGPT? Evaluating LLM-Generated Code Feedback for Mock Technical Interviews}. International Conference on Cooperative and Human Aspects of Software Engineering (CHASE 2025). [27\% acceptance rate] \url{https://doi.org/10.1109/CHASE66643.2025.00018}
+    \item \underline{Xiaoxiao Gan}, \underline{Huayu Liang}, \me. \textit{Challenges, Strategies, and Impacts: A Qualitative Study on UI Testing in CI/CD Processes from GitHub Developers’ Perspectives}. International Conference on Software Testing, Verification and Validation (ICST 2025). \url{https://doi.org/10.1109/ICST62969.2025.10988972}
+    \item Ebtesam Al Haque, \me, Thomas D. LaToza, Brittany Johnson. \textit{Towards Decoding Developer Cognition in the Age of AI Assistants}. IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER 2025) Registered Report track. \url{https://arxiv.org/pdf/2501.02684}
+    \item \underline{Swanand Vaishampayan}, Muhammad Ali Gulzar, \me. \textit{Improving Evidence-Based Tech Hiring with GitHub-Supported Resume Matching}. IEEE International Conference on Software Analysis, Evolution and Reengineering (SANER 2025). [23\% acceptance rate] \url{https://doi.org/10.1109/SANER64311.2025.00081}
+    
+    \item \underline{Tianjia Wang}, Tong Wu, Huayi Li, \me, Yan Chen. \textit{Generative Co-Learners: Enhancing Cognitive and Social Presence of Students in Asynchronous Learning with Generative AI}. ACM International Conference on Supporting Group Work (GROUP 2024). \url{https://doi.org/10.1145/3701198}
+    
+    \item \underline{Lucas Franke}, \underline{Huayu Liang}, \underline{Sahar Farzanehpour}, Aaron Brantly, James C. Davis, \me. \textit{An Exploratory Mixed-methods Study on General Data Protection Regulation (GDPR) Compliance in Open-Source Software}. International Symposium on Empirical Software Engineering and Measurement. (ESEM 2024) [20\% acceptance rate] \url{https://doi.org/10.1145/3674805.3686692}
+    
+    \item \underline{Arpit Thool}, \me. \textit{Harnessing the Power of LLMs to Simplify Security: LLM Summarization for Human-Centric DAST Reports}. Visual Languages and Human-Centric Computing (VL/HCC 2024). [\textit{short paper}] \url{https://doi.org/10.1109/VL/HCC60511.2024.00014}
+
+    \item \underline{Shawal Khalid}, \underline{Huayu Liang}, \me. \textit{Exploring User Perceptions of Crypto Signals: An Empirical Study From Social Media Posts}. International Conference on Blockchain (Blockchain 2024). \url{10.1109/Blockchain62396.2024.00071}
+    
+    \item \underline{Tianjia Wang}, Ramaraja Ramanujan, Yi Lu, Chenyu Mao, Yan Chen, \me. \textit{DevCoach: Supporting Students in Learning the Software Development Life Cycle at Scale with Generative Agents}. Learning at Scale, Work in Progress (L@S WIP 2024). [\textit{short paper}] \url{https://dl.acm.org/doi/10.1145/3657604.3664663}
+    
+    \item \underline{Sean Gruber}, \underline{Grace Govan}, \me. \textit{Exploring Disparities in Student and Practitioner Perceptions of Skill Proficiency with SE Gap Awareness}. Learning at Scale, Work in Progress (L@S WIP 2024). [\textit{short paper}] \url{https://doi.org/10.1145/3657604.3664684}
+    
+    \item \underline{Dibyendu Brinto Bose}, Brendan David-John, \me. \textit{Optimizing AR Application Testing: Integrating Metamorphic Testing to Address Developer and End-User Challenges}. International Conference on Human-Computer Interaction (HCI International 2024) Late Breaking Work [\textit{extended abstract}] \url{https://doi.org/10.1007/978-3-031-76812-5_2}
+    
+    \item Sabaat Haroon, \me, Muhammad Ali Gulzar. \textit{DeSQL: Interactive Debugging of SQL in Data-Intensive Scalable Computing}. ACM International Conference on the Foundations of Software Engineering (FSE 2024). \url{https://doi.org/10.1145/3643761}
+        
+    \item \underline{Shawal Khalid}, \me. \textit{Software Engineering Approaches Adopted by Blockchain Developers}. International Workshop on Blockchain Applications and Theory (BAT 2023). \url{https://doi.org/10.1109/SDS59856.2023.10329007}
+    
+    \item \underline{Tianjia Wang}, Daniel Vargas Diaz, \me, Yan Chen. \textit{Towards Adapting Computer Science Courses to AI Assistants' Capabilities}. Visual Languages and Human-Centric Computing (VL/HCC 2023). [29\% acceptance rate] \url{https://doi.org/10.1109/VL-HCC57772.2023.00018}
+    
+    \item \underline{Minhyuk Ko}, \underline{Dibyendu Brinto Bose}, Hemayet Ahmed Chowdhury, Mohammed Seyam, \me. \textit{Exploring the Barriers and Factors that Influence Debugger Usage for Students}. Visual Languages and Human-Centric Computing (VL/HCC 2023). [\textit{short paper}, 29\% acceptance rate] \url{https://doi.org/10.1109/VL-HCC57772.2023.00027} \\ \textbf{\texttt{\hl{\faTrophy~Best Short Paper, Honorable Mention~\faTrophy}}}
+
+    \item \underline{Swanand Vaishampayan}, \underline{Sahar Farzanehpour}, \me. \textit{Procedural Justice and Fairness in Automated Resume Parsers for Tech Hiring: Insights from Candidate Perspectives}. Visual Languages and Human-Centric Computing (VL/HCC 2023). [\textit{short paper}, 29\% acceptance rate] \url{https://doi.org/10.1109/VL-HCC57772.2023.00019}
+
+    \item Mahnaz Behroozi, Chris Parnin, \me. \textit{Asynchronous Technical Interviews: Reducing the Effect of Supervised Think-Aloud on Communication Ability}. Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2022). [22\% acceptance] \url{https://doi.org/10.1145/3540250.3549168} \\ \textbf{\texttt{\hl{\faTrophy~Distinguished Paper Award~\faTrophy}}}
+
+    \item \me, Chris Parnin. \textit{Comparing Different Developer Behavior Recommendation Styles}. International Conference on Cooperative and Human Aspects of Software Engineering (CHASE 2021). \url{https://doi.org/10.1145/3387940.3391481}
+    
+    
+    \item \me, Chris Parnin. \textit{Understanding the Impact of GitHub Suggested Changes on Recommendations Between Developers}. Joint European Software Engineering Conference and Symposium on the Foundations of Software Engineering (ESEC/FSE 2020). \url{https://doi.org/10.1145/3368089.3409722}
+    
+    \item Peipei Wang, \me, Jamie A. Jennings, Kathryn T. Stolee. \textit{An Empirical Study on Regular Expression Bugs}. International Conference on Mining Software Repositories (MSR 2020). \url{https://doi.org/10.1145/3379597.3387464}
+    
+    \item Peng Sun, \me, Ivan Beschastnikh, Kathryn T. Stolee. \textit{Mining Specifications from Documentation Using a Crowd}. International Conference on Software Analysis, Evolution and Reengineering (SANER 2019). \url{https://doi.org/10.1109/SANER.2019.8668025}
+    
+    \item \me, Justin Middleton, Esha Sharma, Emerson Murphy-Hill. \textit{How Software Users Recommend Tools to Each Other}. Visual Languages and Human-Centric Computing (VL/HCC 2017). \url{https://doi.org/10.1109/VLHCC.2017.8103460}
+        
+    \item Justin Smith, \me, Emerson Murphy-Hill. \textit{Flower: Navigating Program Flow in the IDE}. Visual Languages and Human-Centric Computing (VL/HCC 2017). \url{https://doi.org/10.1109/VLHCC.2017.8103445}
+    
+    \item Susan H. Rodger, \textbf{Dwayne Brown}, Michael Hoyle, Daniel MacDonald, Michael Marion, Elizabeth Onstwedder, Bella Onwumbiko, Edwin Ward. \textit{Weaving Computing into all Middle School Disciplines}. Innovation and Technology in Computer Science Education (ITiCSE 2014). \url{https://doi.org/10.1145/2591708.2591754}
+\end{enumerate}
+
+%------------------------------------------------
+\textbf{Workshop Publications}
+
+\begin{enumerate}[{start=24,label=[W\arabic*]\addtocounter{enumi}{-2}}]
+\item \underline{Dibyendu Brinto Bose}, \underline{Yoseph Alebachew Berhanu}, and \me. \textit{LLMs in Debate: Does Arguing Make Them Better at Detecting Metamorphic Relations?}. International Workshop on Autonomous Agents in Software Engineering (AgenticSE 2025).
+    \item \underline{Ryan Wood}, \me. \textit{Understanding User Perceptions of Automated Dark Pattern Detection Online}. Designing for Everyone: Advancing User Experience Through Human-Centric Design Methodologies.
+    \item \underline{Swanand Vaishampayan}, \me. \textit{Do LLM-Generated Resumes Make Me More Qualified? An Observational Study of LLMs For Resume Generation and Matching Tasks}. Designing for Everyone: Advancing User Experience Through Human-Centric Design Methodologies.
+    \item \underline{Minhyuk Ko}, \underline{Shawal Khalid}, \me. \textit{ParticipantGuide: Promoting Transparency in Human-Centric User Studies}. Designing for Everyone: Advancing User Experience Through Human-Centric Design Methodologies.
+    \item \underline{Shawal Khalid}, \me. \textit{Evaluating Capabilities and Perspectives of Generative AI Tools in Smart Contract Development}.  International Symposium on Blockchain and Secure Critical Infrastructure (BSCI).
+    \item Ebtesam Al Haque, \me, Thomas D. LaToza, Brittany Johnson. \textit{The Evolution of Information Seeking in Software Development: Understanding the Role and Impact of AI Assistants}. Workshop on Human-Centered AI for SE (HumanAISE). \url{https://doi.org/10.1145/3696630.3731665}
+    \item \me, \underline{Swanand Vaishampayan}. \textit{Towards Evidence-Based Tech Hiring Pipelines}. Software Engineering in 2030 Workshop (SE2030). \url{https://arxiv.org/abs/2504.06387}
+    \item \underline{Dibyendu Brinto Bose}. \textit{From Prompts to Properties: Rethinking LLM Code Generation with Property-Based Testing}. International Workshop on Large Language Model-Oriented Empirical Research (LLANMER 2025). \url{https://doi.org/10.1145/3696630.3728702}
+    \item \underline{Sahar Farzanepour}, \underline{Swetha Rajeev}, \underline{Huayu Liang}, Ritvik Prabhu, and \me. \textit{ResearchBot: Bridging the Gap Between Academic Research and Practical Programming Communities}. International Workshop on Bots in Software Engineering (BotSE 2025). \url{https://doi.org/10.1109/BotSE67031.2025.00017}
+    \item \underline{Shawal Khalid}, \underline{Huayu Liang}, \me. \textit{Decoding the Influence: Analyzing the Impact of Crypto Signals on Software Repositories}. International Workshop on Blockchain Oriented  Software Engineering (IWBOSE 2025).
+    \item \underline{Dibyendu Brinto Bose}, \me. \textit{An Empirical Study on Current Practices and Challenges of Core AR/VR Developers}. International Workshop on Virtual and Augmented Reality Software Engineering (VARSE 2024). \url{https://doi.org/10.1145/3691621.3694956}
+    \item \underline{Shawal Khalid}, \me. \textit{Exploring Stakeholder Challenges in Recruitment for Human-Centric Computing Research}. Workshop on Addressing Challenges in Recruiting Participants for Human-Centric Computing Research Studies (VL/HCC Workshop 2024). \url{https://doi.org/10.1109/VL/HCC60511.2024.00068}
+    \item \underline{Yoseph Berhanu Alebachew}, \me. \textit{Proposed Experiment on Automatic Bias Detection in Source Code Review}. Annual Workshop of the Psychology of Programming Interest Group (PPIG 2024). \url{https://www.ppig.org/files/2024-PPIG-35th-alebachew.pdf}
+    \item Sonja Hyrynsalmi, Sebastian Baltes, \me, Rafael Prikladnicki, Gema Rodríguez-Pérez, Jocelyn Simmonds, Bianca Trinkenreich, Yi Wang, and Grischa Liebel. \textit{Bridging Gaps, Building Futures: Advancing Software Developer Diversity and Inclusion Through Future-Oriented Research}. Software Engineering in 2030 Workshop (SE2030). \url{https://arxiv.org/abs/2404.07142v1}
+    \item \underline{Arpit Thool}, \me. \textit{Securing Agile: Assessing the Impact of Security Activities on Agile Development}. International Workshop on Secure Software: Challenges, Opportunities, and Lessons Learned co-located with the International Conference on Evaluation and Assessment in Software Engineering (Secure Software 2024). \url{https://dl.acm.org/doi/10.1145/3661167.3661280}
+    \item  \underline{Shawal Khalid}, \me. \textit{Software Engineering Approaches Adopted By Blockchain Developers}. International Workshop on Blockchain Applications and Theory in conjunction with the International Conference on Software Defined Systems (BAT 2023). \url{https://doi.org/10.1109/SDS59856.2023.10329007}
+    \item  \underline{Nivishree Palvannan}, \me. \textit{Suggestion Bot: Analyzing the Impact of Automated Suggested Changes on Code Reviews}. International Workshop on Bots in Software Engineering in conjunction with the International Conference on Software Engineering (BotSE 2023). \url{https://doi.org/10.1109/BotSE59190.2023.00015}
+     
+    \item  \underline{Md Mahim Anjum Haque}, Wasi Uddin Ahmad, Ismini Lourentzou, \me.
+     \textit{FixEval: Execution-based Evaluation of Program Fixes for Programming Problems}. International Workshop on Automated Program Repair in conjunction with the International Conference on Software Engineering (APR 2023). %[\url{https://program-repair.org/workshop-2023/}]
+
+    \item \me. \textit{Nudging Developers to Participate in SE Research}. International Workshop on Recruitment Of Participants for Empirical SE Studies in conjunction with the International Conference on Software Engineering (ROPES 2022). \url{https://ropes-workshops.github.io/ropes22/}
+    
+    \item \me, Chris Parnin. \textit{Dark Patterns for Influencing Developer Behavior}. What Can CHI Do About Dark Patterns? Workshop in conjunction with the ACM Conference on Human Factors in Computing Systems  (Dark Patterns 2021). \url{https://darkpatternsindesign.com/position-papers/}
+    
+    \item \me, Chris Parnin. \textit{Nudging Students Toward Better Software Engineering Behaviors}. International Workshop on Bots in Software Engineering in conjunction with the International Conference on Software Engineering (BotSE 2021). \url{https://doi.org/10.1109/BotSE52550.2021.00010}
+    
+    \item \me, Chris Parnin. \textit{Sorry to Bother You Again: Developer Recommendation Choice Architectures for Designing Effective Bots}. International Workshop on Bots in Software Engineering in conjunction with the International Conference on Software Engineering (BotSE 2020). \url{https://doi.org/10.1145/3387940.3391506}
+    
+    \item \me, Chris Parnin. \textit{Sorry to Bother You: Designing Bots for Effective Recommendations}. International Workshop on Bots in Software Engineering in conjunction with the International Conference on Software Engineering (BotSE 2019). \url{https://doi.org/10.1109/BotSE.2019.00021}
+        
+    \item Susan H. Rodger, Steve Cooper, Wanda Dann, \textbf{Dwayne C. Brown}, Jacobo Carrasquel. \textit{Experimenting with and Integrating Alice 2.3 into many disciplines (abstract only)}. Special Interest Group on Computer Science Education (SIGCSE 2013). \url{https://doi.org/10.1145/2445196.2445513}
+\end{enumerate}
+
+%------------------------------------------------
+
+%------------------------------------------------
+\textbf{Lightning Talks and Posters}
+
+\begin{enumerate}[{start=5,label=[P\arabic*]\addtocounter{enumi}{-2}}]
+    \item \underline{Tianjia Wang}, \me. ``Aligning Software Engineering Education with Generative AI:
+  Insights from Developers, Instructors with Concept Inventory Design''. \textit{International Computing Education Research} (ICER 2025). [lightning talk]
+  \item \underline{Xiaoxiao Gan}, \me. ``Designing a Comprehensive and Practical Testing Curriculum for
+  Undergraduate Computer Science Students''. \textit{International Computing Education Research} (ICER 2025). [lightning talk]
+    \item \underline{Minhyuk Ko}, \underline{Dibyendu Brinto Bose}, Weiu Wang, Mohammed Seyam, \me. ``Understanding the Performance of Large Language Model to Generate SQL Queries''. \textit{Visual Languages and Human-Centric Computing Posters and Showpieces track} (VL/HCC 2024). \url{https://doi.org/10.1109/VL/HCC60511.2024.00048}
+    \item \underline{Lucas Franke}, \underline{Huayu Liang}, Aaron Brantly, James C. Davis, \me. ``A First Look at the General Data Protection Regulation (GDPR) in Open-Source Software''. \textit{International Conference on Software Engineering, Posters track} (ICSE 2024). \url{https://doi.org/10.1145/3639478.3643077}
+    \item Susan H. Rodger, \textbf{Dwayne C. Brown}, Michael Hoyle, Michael Marion. ``Integrating Computer Science into Middle School Mathematics''. \textit{Special Interest Group on Computer Science Education} (SIGCSE 2013). [poster] \url{https://doi.org/10.1145/2445196.2445424}
+\end{enumerate}
+
+\textbf{Doctoral Symposia}
+
+\begin{enumerate}[{start=5,label=[DS\arabic*]\addtocounter{enumi}{-2}}]
+    \item \underline{Yoseph Alebachew Berhanu}. ``AI-Guided Exploration of Large-Scale Codebases''. \textit{Visual Languages and Human-Centric Computing Graduate Consortium} (VL/HCC GC 2025).
+    \item \underline{Minhyuk Ko}. ``Autoprint: An Automatic Print Statement Insertion Tool''. \textit{Richard Tapia Celebration of Diversity in Computing Conference Doctoral Consortium} (Tapia 2024).
+    \item \underline{Shawal Khalid}. ``A Comprehensive Approach to Supporting Blockchain Developers''. \textit{Visual Languages and Human-Centric Computing Graduate Consortium} (VL/HCC GC 2024).
+    \item \underline{Swanand Vaishampayan}. ``Procedural Justice for Computer Science Hiring: Towards Fair and Equitable AI''. \textit{Visual Languages and Human-Centric Computing Graduate Consortium} (VL/HCC GC 2024).
+    \item \me. ``Nudges for Encouraging Developer Actions''. \textit{International Conference on Software Engineering: Companion Proceedings} (ICSE 2019). \url{https://doi.org/10.1109/ICSE-Companion.2019.00082}
+\end{enumerate}
+
+\textbf{Undergraduate Research Posters}
+\begin{enumerate}[{start=12,label=[P\arabic*]\addtocounter{enumi}{-2}}]
+    \item \underline{Javier Ralat}. ``Ask A Researcher: Transforming Research to Practice.'' \textit{Virginia Tech Summer Research Symposium}. Virginia Tech Multicultural Academics Opportunities Program (MAOP 2024).
+    \item \underline{Syeda Hossain}. ``
+    Understanding User and Developer Perceptions of Dark Patterns in Software.'' \textit{Virginia Tech Summer Research Symposium}. Virginia Tech Multicultural Academics Opportunities Program (MAOP 2024).
+    \item \underline{Travis Chan}. ``User Interface Development using CustomTkinter for Automating Python Dependency Recognition.'' \textit{Virginia Tech Summer Research Symposium}. Virginia Tech Multicultural Academics Opportunities Program (MAOP 2024).
+    \item \underline{Yasemin Tanyu}, \underline{Peiqing Guo}, \me. ``Modernizing the Academic Journey: A User-Centric Plan of Study Tool for MS and PhD Students in CS''. \textit{Virginia Tech Undergraduate Research in Computer Science Spring Symposium} (VTURCS 2024). \textbf{\texttt{\hl{\faTrophy~2nd Place, Research Division~\faTrophy}}}
+    \item \underline{Matthew Trimble}, \underline{Dibyendu Brinto Bose}, \me. ``Python Library Release Predictions''. \textit{Virginia Tech Undergraduate Research in Computer Science Spring Symposium} (VTURCS 2024). \textit{Virginia Tech Undergraduate Research in Computer Science Spring Symposium} (VTURCS 2024).
+    \item \underline{Omer Ahmed}, \me. ``AI Tools vs Debugging Tools: Exploring User Perceptions on Bug Locating Performance''. \textit{Virginia Tech Summer Research Symposium}. Virginia Tech Multicultural Academics Opportunities Program (MAOP 2023).
+    \item \underline{Edwin Lewis II}, \me. ``Postmortems: The Game Development Process''. \textit{Virginia Tech Summer Research Symposium}. Virginia Tech Multicultural Academics Opportunities Program (MAOP 2023).
+    \item \underline{Colin Roberts}, \me. ``Enhancing Debugging Efficiency: User Perspectives on AutoPrint, an Automated Print Statement Tool''. \textit{Virginia Tech Summer Research Symposium}. Virginia Tech Multicultural Academics Opportunities Program (MAOP 2023). [poster]
+    \item \underline{Sahar Farzanehpour}, \me, \underline{Swanand Vaishampayan}. ``Automated Resume Parsing: Resume vs. Online Profiles''. \textit{Virginia Tech Undergraduate Research in Computer Science Spring Symposium} (VTURCS 2023).
+    \item \underline{Jenna Krebs}, \me. ``A Study of Exponent and Pramp as Technical Interview Preparation Tools''. \textit{Dennis Dean Undergraduate Research and Creative Scholarship Conference}. Virginia Tech, 2023.
+    \item Hennah Nazari, \underline{Brian Bell}, \textbf{Chris Brown}, Sang Won Lee. ``Understanding Challenges in Technical-Interview Preparation Process''. \textit{Virginia Tech Undergraduate Research in Computer Science Spring Symposium} (VTURCS 2022). 
+    \item \underline{Grace Govan}, \underline{Sean Gruber}, \textbf{Chris Brown}. ``Gaps in Software Engineering Education''. \textit{Virginia Tech Undergraduate Research in Computer Science Spring Symposium} (VTURCS 2022). 
+\end{enumerate}
+
+\textbf{Other Non-Published Symposia, Conferences, Workshops, and Posters}    
+\begin{enumerate}[{start=14,label=[O\arabic*]\addtocounter{enumi}{-2}}]
+    \item \underline{Swanand Vaishampayan}, \me. ``Human and LLM-Based Resume Matching: An Observational Study''. \textit{Amazon-Virginia Tech Initiative for Efficient and Robust Machine Learning}. 2024. [poster]
+    \item \underline{Dibyendu Brinto Bose}, \underline{Travis Chan}, \underline{Matthew Trimble}, \me. ``AutoPyDep: A Recommendation System for Python Dependency Management Utilizing Graph-Based Analytics''. \textit{Amazon-Virginia Tech Initiative for Efficient and Robust Machine Learning}. 2024. [poster]
+    \item \underline{Omer Ahmed}. ``AI Tools vs Debugging Tools: Exploring User Perceptions on Bug Locating Performance''. \textit{VA–NC Alliance Undergraduate Research Symposium}. 2024. Louis Stokes Alliances for Minority Participation (LSAMP) Program, Charlottesville, VA. \textbf{\texttt{\hl{\faTrophy~1st Place~\faTrophy}}}
+    \item \underline{Omer Ahmed}. ``AI Tools vs Debugging Tools: Exploring User Perceptions on Bug Locating Performance''. \textit{Virginia State University Annual Research Conference}. 2024. Virginia State, Petersburg, VA.
+    \item \underline{Shawal Khalid}. ``Unveiling the Potential of Blockchain in Software Engineering and HCI: An Exploratory Reflection''. \textit{CHCI Big Ideas Workshop}. Center for Human-Computer Interaction, Virginia Tech, 2024. [lightning talk]
+    \item \underline{Shawal Khalid}, \me. ``Smart Contract Generation: A Comparison Between Generative AI Tools''. \textit{ACM Capital Region Celebration of Women in Computing} (CAPWIC 2024). Charlottesville, VA.
+    \item \underline{Huayu Liang}, \me. ``Understanding End User and Software Engineer Perceptions of Dark Patterns''. \textit{ACM Capital Region Celebration of Women in Computing} (CAPWIC 2024). Charlottesville, VA.
+    \item \underline{Xiaoxiao Gan}, \me. ``Exploring Challenges of Integrating GUI Testing Framework in CI/CD Workflows on Open Source Repositories''. \textit{ACM Capital Region Celebration of Women in Computing} (CAPWIC 2024). Charlottesville, VA. [poster]
+    \item \underline{Minhyuk Ko}. ``AutoPrint: Automatic Print Statement Insertion Tool''. \textit{Eastern Atlantic Students in Software Engineering Colloquium} (ESSEC 2024). William \& Mary, Williamsburg, VA.
+    \item \underline{Shawal Khalid}. ``Smart Contract Generation: Comparison Between Generative AI Tools''. \textit{Eastern Atlantic Students in Software Engineering Colloquium} (ESSEC 2024). William \& Mary, Williamsburg, VA.
+    \item \underline{Xiaoxiao Gan}. ``Exploring Challenges of Integrating GUI Testing framework in CI/CD Workflows on Open Source Repositories''. \textit{Eastern Atlantic Students in Software Engineering Colloquium} (ESSEC 2024). William \& Mary, Williamsburg, VA.
+    \item \underline{Omer Ahmed}, \me. ``AI Tools vs Debugging Tools: Exploring User Perceptions on Bug Locating Performance''. \textit{Dr. Wayne Scales Undergraduate Research and Creative Scholarship Symposium}. Virginia Tech, 2024. \textbf{\texttt{\hl{\faTrophy~2nd Place~\faTrophy}}}
+    \item \underline{Minhyuk Ko}. ``Automatic Print Statement Insertion Tool''. \textit{CHCI Big Ideas Workshop}. Center for Human-Computer Interaction, Virginia Tech, 2023. [lightning talk]
+    \item \me. ``Repurposing Software Engineering Faux Pas to Improve Developer Behavior''. \textit{CHCI Big Ideas Workshop}. Center for Human-Computer Interaction, Virginia Tech, 2023.
+\end{enumerate}
+
+\end{rSection}
+
 %----------------------------------------------------------------------------------------
 %	RESEARCH EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
-\begin{rSection}{Research}
+% \begin{rSection}{Research}
 
-%------------------------------------------------
+% %------------------------------------------------
 
-\begin{rSubsection}{Research Assistant}{Fall 2018 - present}{North Carolina State University (Dr. Chris Parnin)}{Raleigh, NC}
-\item Implemented and evaluated the \textit{naive telemarketer design} baseline developer recommendation approach in \textsl{tool-recommender-bot} to generate automated pull requests recommending static analysis tools to Maven projects 
-\item Mined GitHub repositories, surveyed users, and designed a user study to explore the impact of GitHub suggested changes on recommendations between developers
-\item Categorizing regular expression errors and fixes in GitHub pull requests
-\item Developed and evaluated \textsl{class-bot} systems to determining the impact of digital nudges on improving student programming behaviors 
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+% \begin{rSubsection}{Research Assistant}{Fall 2018 - Spring 2021}{North Carolina State University (Dr. Chris Parnin)}{Raleigh, NC}
+% \item Implemented and evaluated the \textit{naive telemarketer design} baseline developer recommendation approach in \textsl{tool-recommender-bot} to generate automated pull requests recommending static analysis tools to Maven projects 
+% \item Mined GitHub repositories, surveyed users, and designed a user study to explore the impact of GitHub suggested changes on recommendations between developers
+% \item Categorizing regular expression errors and fixes in GitHub pull requests
+% \item Developed and evaluated \textsl{class-bot} systems to determining the impact of digital nudges on improving student programming behaviors 
+% \end{rSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
 
-\begin{rSubsection}{Research Assistant}{Fall 2017 - Spring 2018}{North Carolina State University (Dr. Emerson-Murphy-Hill)}{Raleigh, NC}
-\item Investigated implementing a new tool recommendation approach commending developers for bug fixes, apprehending locations of similar errors, and recommending tools to help find and fix bugs
-\item Researched using crowd-sourcing to improve automatically generated Java API documentation
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+% \begin{rSubsection}{Research Assistant}{Fall 2017 - Spring 2018}{North Carolina State University (Dr. Emerson-Murphy-Hill)}{Raleigh, NC}
+% \item Investigated implementing a new tool recommendation approach commending developers for bug fixes, apprehending locations of similar errors, and recommending tools to help find and fix bugs
+% \item Researched using crowd-sourcing to improve automatically generated Java API documentation
+% \end{rSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
 
-\begin{rSubsection}{Research Assistant}{Fall 2016 - Spring 2017}{North Carolina State University (Dr. Emerson Murphy-Hill)}{Raleigh, NC}
-\item Developed and evaluated Eclipse plugin to improve code navigation for developers called \textit{Flower}
-\item Conducted a user study to determine effective characteristics of peer interactions for tool recommendations and discovered user receptiveness is the only significant attribute
-\item Published and presented this work at a peer-reviewed research conference
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+% \begin{rSubsection}{Research Assistant}{Fall 2016 - Spring 2017}{North Carolina State University (Dr. Emerson Murphy-Hill)}{Raleigh, NC}
+% \item Developed and evaluated Eclipse plugin to improve code navigation for developers called \textit{Flower}
+% \item Conducted a user study to determine effective characteristics of peer interactions for tool recommendations and discovered user receptiveness is the only significant attribute
+% \item Published and presented this work at a peer-reviewed research conference
+% \end{rSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
 
-\begin{rSubsection}{Independent Study}{Fall 2016}{North Carolina State University (Dr. Guoliang Jin)}{Raleigh, NC}
-\item Designed an algorithm using automated program repair concepts to grade introductory programming assignments
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+% \begin{rSubsection}{Independent Study}{Fall 2016}{North Carolina State University (Dr. Guoliang Jin)}{Raleigh, NC}
+% \item Designed an algorithm using automated program repair concepts to grade introductory programming assignments
+% \end{rSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
 
-\begin{rSubsection}{Computer Science Undergraduate Research Fellow}{Summer 2012 - Spring 2013}{Duke University (Dr. Susan Rodger)}{Durham, NC}
-\item Researched integrating computer science into middle school education with Alice
-\item Mapped Common Core K-12 standards to CSTA computer science education standards
-\item Created tutorials for students and teachers to create Alice worlds based on educational concepts
-\item Taught Alice programming and tutorials to K-12 teachers at summer workshops as well as middle school students during activity days
-\item Wrote senior honor's thesis \textit{``Integrating Computer Science Into Middle School Mathematics"} 
-\item Published a paper, poster, and participated in a workshop demo
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+% \begin{rSubsection}{Computer Science Undergraduate Research Fellow}{Summer 2012 - Spring 2013}{Duke University (Dr. Susan Rodger)}{Durham, NC}
+% \item Researched integrating computer science into middle school education with Alice
+% \item Mapped Common Core K-12 standards to CSTA computer science education standards
+% \item Created tutorials for students and teachers to create Alice worlds based on educational concepts
+% \item Taught Alice programming and tutorials to K-12 teachers at summer workshops as well as middle school students during activity days
+% \item Wrote senior honor's thesis \textit{``Integrating Computer Science Into Middle School Mathematics"} 
+% \item Published a paper, poster, and participated in a workshop demo
+% \end{rSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
 
-\begin{rSubsection}{Distributed Research Experience for Undergraduates (DREU)}{Summer 2011}{Brown University (Dr. Chad Jenkins)}{Providence, RI - Moss Beach, CA}
-\item Investigated applications for robotics in society using ROS, Python, drones, and iRobot Create robots
-\item Developed \textsl{SwagBot}, a remote controlled telepresence robot to help disabled users retrieve items
-\end{rSubsection}
+% \begin{rSubsection}{Distributed Research Experience for Undergraduates (DREU)}{Summer 2011}{Brown University (Dr. Chad Jenkins)}{Providence, RI - Moss Beach, CA}
+% \item Investigated applications for robotics in society using ROS, Python, drones, and iRobot Create robots
+% \item Developed \textsl{SwagBot}, a remote controlled telepresence robot to help disabled users retrieve items
+% \end{rSubsection}
+
+% \end{rSection}
+% \vspace{-10pt}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATIONS SECTION
+%----------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	FUNDING SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research Funding total = \$339,673 (\$314,173)}
+\textit{I am the primary investigator (PI) unless otherwise specified. My portion is denoted in parentheses.}
+
+\begin{enumerate}[{start=11,label=[G\arabic*]\addtocounter{enumi}{-2}}]
+    \item \begin{rSubsection}{Center for Future Work Places and Practices Summer Seed Grant}{\$2,000}{Investigating the Effects of Explainable AI-Based Resume Matching on Job Seekers}{}
+    \item[] June 30, 2025 -- August 31, 2025
+    \end{rSubsection}
+    \item \begin{rSubsection}{IEEE Diversity \& Inclusion Fund}{\$5,000}{Helping Underrepresented Students Navigate the Tech Hiring Pipeline}{}
+    \item[] February 1, 2025 -- May 31, 2025
+    \end{rSubsection}
+    \item \begin{rSubsection}{Commonwealth Cyber Initiative (CCI): 2025 Cybersecurity Research}{\$37,500}{Bridging the Gap Between User Interface Security and CI/CD Workflows}{}   
+    \item[] July 1, 2024 -- June 30, 2025
+    \end{rSubsection}
+    \item \begin{rSubsection}{Virginia Tech University Libraries Collaborative Research Grant}{\$10,000}{Promoting Software Engineering Best Practices for Research Software Engineers at VT}{}   
+    \item Co-PI: Jonathon Bradley (\textit{University Libraries}), Virginia Tech
+    \item[] July 1, 2024 -- May 1, 2025
+    \end{rSubsection}
+    \item \begin{rSubsection}{Sloan Foundation}{\$140,173}{Designing and Implementing Automated Solutions to Promote Software Engineering Best Practices in Research Software Development}{}
+    \item[] May 1, 2024 -- October 31, 2025
+    \end{rSubsection}
+    \item \begin{rSubsection}{National Science Foundation CISE Career Workshop Travel Support}{\$1,500}{}{}    
+    \item[] April 29-30, 2024
+    \end{rSubsection}
+    \item \begin{rSubsection}{CCI: Workforce and Industry Engagement Program}{\$10,000}{Understanding How Software Developers Secure User
+Interfaces in Rapid Release Environments}{}
+    \item[] May 1, 2024 -- August 31, 2024
+    \end{rSubsection}
+    \item \begin{rSubsection}{Virginia Tech Institute for Society, Culture and Environment (ISCE)}{\$7,500}{Investigating and Mitigating Bias in AI-Based Automated Resume Parsing Systems}{}
+    \item[] December 1, 2023 -- June 30, 2024
+    \end{rSubsection}
+    \item \begin{rSubsection}{Virginia Tech Student Engineers' Council Big Contribution Grant (2023)}{\$8,000}{}{}
+    \end{rSubsection}
+    \item \begin{rSubsection}{CCI: Securing Interactions between Humans and Machines}{\$60,000 (\$58,500)}{Understanding the Impact of Data Privacy Regulations on Software and Its Stakeholders}{}
+    \item Co-PI: Aaron Brantly (\textit{Political Science}), Virginia Tech
+    \item[] December 1, 2022 -- August 31, 2024
+    \end{rSubsection}
+    \item \begin{rSubsection}{Google Award for Inclusion Research (2022)}{\$60,000 (\$36,000)}{Supporting Under-Resourced Software Engineering Job Seekers through Facilitating Online Collaboration in Technical Interview Preparation}{}
+ \item Co-PI: Sang Won Lee (\textit{Computer Science}), Virginia Tech
+ \end{rSubsection}
+\end{enumerate}
 
 \end{rSection}
-% \vspace{-10pt}
+
 %----------------------------------------------------------------------------------------
 %	TEACHING EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \begin{rSection}{Teaching}
+\textit{I am the instructor of record unless otherwise specified.}
 
 %------------------------------------------------
-\begin{rSubsection}{Teaching and Communication Certificate}{September 2019 - present}{North Carolina State University}{Raleigh, NC}
-\item NC State Graduate Certificate program requiring 100 hours of approved workshops and activities
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{rSubsection}{Instructor}{May - July 2020}{North Carolina State University}{* Virtual due to COVID-19}
-\item Instructor of record for \textsc{CSC116} (\textit{Introduction to Computing - Java}) for Summer 2020
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{rSubsection}{Guest Lecture Presentation}{March 2, 2020}{North Carolina State University}{Raleigh, NC}
-\item ``Team Project Bot" lecture presentation and \texttt{class-bot} demo for \textsc{CSC326} (\textit{Software Engineering})
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{rSubsection}{Python Instructor}{June - August 2019}{The Coding School}{Virtual}
-\item Tutored a high school student through the codeConnects teaching and mentorship summer program for underrepresented minorities in STEM
-\end{rSubsection}
-\vspace{-5pt}
+\textbf{Virginia Tech}
+
+
+CS3704: Intermediate Software Design and Engineering \\
+\textsl{\small Fall 2023, Fall 2024, Fall 2025}
+
+CS5704: Software Engineering \\
+\textsl{\small Spring 2022, Spring 2023, Spring 2025}
+
+CS6704: Advanced Topics in Software Engineering \\
+\textsl{\small Spring 2024}
+
+Independent Studies \\
+\textsl{\small CS5974: Summer 2022, Spring 2023}\\
+\textsl{\small CS4974: Spring 2023, Summer 2023}\\
+\textsl{\small CS2974: Spring 2022}
+
+\textbf{NC State}
+
+\begin{tabular}{ l l }
+ Summer 2020 & CSC116: Introduction to Computing - Java$^*$ \\
+ Spring 2016 & CSC216: Java Programming Concepts \textit{(Teaching Assistant)} \\
+ Fall 2015 & CSC326: Software Engineering \textit{(Teaching Assistant)} \\
+ \footnotesize{* Virtual due to COVID-19} & \\
+\end{tabular}
+
+% \underline{\textsc{Miscellaneous}}
+
+% \begin{rSubsection}{The Coding School}{Python Instructor}{Summer 2019}{Virtual}
+% \item Tutored a high school student through the codeConnects teaching and mentorship summer program for underrepresented minorities in STEM.
+% \end{rSubsection}
+
+
+
+% %------------------------------------------------
+% \begin{rSubsection}{Guest Lecture Presentation}{March 2, 2020}{North Carolina State University}{Raleigh, NC}
+% \item ``Team Project Bot" lecture presentation and \texttt{class-bot} demo for \textsc{CSC326} (\textit{Software Engineering})
+% \end{rSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{rSubsection}{Python Instructor}{June - August 2019}{The Coding School}{Virtual}
+% \item Tutored a high school student through the codeConnects teaching and mentorship summer program for underrepresented minorities in STEM
+% \end{rSubsection}
+% \vspace{-5pt}
 %------------------------------------------------
 
-\begin{rSubsection}{Java Tutor}{August - December 2017}{North Carolina State University}{Raleigh, NC}
-\item Tutored CSC116 (\textit{Introduction to Computing - Java}) students through NC State Students and Technology in Academia, Research and Service (STARS)
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{rSubsection}{Java Tutor}{August - December 2016}{AP Computer Science}{Raleigh, NC}
-\item Tutored a local high school student enrolled in AP Computer Science 
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-
-\begin{rSubsection}{Teaching Assistant}{January - May 2016}{North Carolina State University}{Raleigh, NC}
-\item Graded projects and exams, held office hours, and used Jenkins to manage student Java programming assignments for CSC216 (\textit{Java Programming Concepts})
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-
-\begin{rSubsection}{Teaching Assistant}{August - December 2015}{North Carolina State University}{Raleigh, NC}
-\item Graded assignments and exams, held office hours, taught lab sections, and used Jenkins to manage Java programming assignments for CSC326 (\textit{Software Engineering})
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-
-\begin{rSubsection}{C++ Tutor}{January - May 2015}{Central Piedmont Community College}{Charlotte, NC}
-\item Tutored a student taking an introductory programming class at Central Piedmont Community College
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-
-\begin{rSubsection}{Alice Activity Day}{March 23, 2013}{Duke University}{Durham, NC}
-\item Taught Alice programming to local 6th grade students in two 3-hour sessions to collect data for research thesis through the Duke Computer Science Undergraduate Research Fellowship (CSURF) program
-\end{rSubsection}
-\vspace{-5pt}
+% \begin{rSubsection}{Alice Activity Day}{March 23, 2013}{Duke University}{Durham, NC}
+% \item Taught Alice programming to local 6th grade students in two 3-hour sessions to collect data for research thesis through the Duke Computer Science Undergraduate Research Fellowship (CSURF) program
+% \end{rSubsection}
+% \vspace{-5pt}
 
 %------------------------------------------------
 
-\begin{rSubsection}{Creating a 3D Interactive Story}{February 22, 2013}{Duke University}{Durham, NC}
-\item Taught Alice programming to 4th-6th grade girls for Females Excelling More in Math, Engineering, and Science (FEMMES) event
-\end{rSubsection}
-\vspace{-5pt}
+% \begin{rSubsection}{Creating a 3D Interactive Story}{February 22, 2013}{Duke University}{Durham, NC}
+% \item Taught Alice programming to 4th-6th grade girls for Females Excelling More in Math, Engineering, and Science (FEMMES) event
+% \end{rSubsection}
+% \vspace{-5pt}
 
 %------------------------------------------------
 
-\begin{rSubsection}{Adventures in Alice}{November 30, 2012}{Oak Grove Middle School}{Winston-Salem, NC}
-\item Taught Alice programming using created tutorials to three 6th grade math and science classes
-\end{rSubsection}
-\vspace{-5pt}
+% \begin{rSubsection}{Adventures in Alice}{November 30, 2012}{Oak Grove Middle School}{Winston-Salem, NC}
+% \item Taught Alice programming using created tutorials to three 6th grade math and science classes
+% \end{rSubsection}
+% \vspace{-5pt}
 %------------------------------------------------
 
-\begin{rSubsection}{Adventures in Alice Programming Workshops}{June 18-29 and July 9-13, 2012}{Duke University}{Durham, NC}
-\item Taught Alice programming to K-12 teachers to integrate beginner computer science concepts into K-12 curriculum
-\end{rSubsection}
+% \begin{rSubsection}{Adventures in Alice Programming Workshops}{June 18-29 and July 9-13, 2012}{Duke University}{Durham, NC}
+% \item Taught Alice programming to K-12 teachers to integrate beginner computer science concepts into K-12 curriculum
+% \end{rSubsection}
 
 \end{rSection}
 % \vspace{-10pt}
@@ -333,224 +500,419 @@ Bots in Software Engineering in conjunction with ICSE
 
 \begin{rSection}{Service}
 
-%------------------------------------------------
-\begin{sSubsection}{Program Committee Member}{BotSE 2021}{}{}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Decoding CS Grad School}{December 1, 2020}{Panelist}{Virtual}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NC State CSC PhD Recruitment Weekend}{February 28-29, 2020}{Coordinator}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{HackDuke: Code for Good}{November 2-3, 2019}{Volunteer}{Durham, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{All Things Open}{October 2016, 2017, 2018, 2019}{Volunteer}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NC State CSC PhD Recruitment Weekend}{Spring 2018, 2019}{Volunteer}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Bridge to the Doctorate Program}{February 15, 2019}{Graduate Student Panelist}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Open Source 101}{February 2017, 2018}{Volunteer}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NC-LSAMP\footnote{North Carolina Louis Stokes Alliance for Minority Participation}}{November 11, 2017}{Undergraduate Research Conference Panelist}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{VL/HCC, Blocks and Beyond Workshop}{October 10-13, 2017}{Student Volunteer}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Red Hat Diversity and Inclusion Week}{July 2017}{``Why Diversity Matters''}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
+\textbf{External Service}
 
-% ------------------------------------------------
-\begin{sSubsection}{Big Brothers Big Sisters}{October 2014 - July 2015}{Big Brother (Mentor)}{Charlotte, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{SIGCSE 2012}{February 29 - March 3, 2012}{Student Volunteer}{Raleigh, NC}
-\end{sSubsection}
+\textit{Grant Proposal Reviewer}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item CCI
+    \begin{itemize}
+        \item Critical Infrastructure Cybersecurity (2025)
+        \item AI for Cybersecurity / Cybersecurity for AI (2024)
+    \end{itemize}
+    \item National Science Foundation: Secure and Trustworthy Cyberspace (SaTC) NSF panel (2024) 
+\end{itemize}
+
+\textit{Conference/Workshop Organization}
+
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item International Workshop on Large Language Model-Oriented Empirical Research (LLanMER) at FSE 2025: Organizer
+    \item VL/HCC 2025: Workshop Co-Chair and Grad Consortium Co-Chair
+    \item FSE 2024: Web Co-Chair
+\end{itemize}
+
+\textit{Conference Session Chair}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item ESEM: 2025 [Program Comprehension and Review 2]
+    \item FSE SEET: 2025 [Testing and Platforms]
+    \item LLanMer: 2025 [LLMs for SE]
+    \item VL/HCC: 2023 [Software Demonstrations]; 2025 [Creative AI \& Multimodal Interfaces]
+    \item CHASE: 2022 [Mixed Session]
+\end{itemize}
+
+\textit{Program Committee Member}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item SANER: 2026 [Early Research Achievement Track]
+    \item VL/HCC: 2025
+    \item LLanMER: 2025
+    \item EASE: 2025 [Short Papers and Emerging Results Track]
+    \item ICSE: 2025
+    \item FSE: 2023 [Tutorials Track]
+    \item SIGCSE: 2023 [Birds of a Feather Track]
+    \item BotSE: 2021, 2022, 2023, 2025
+    \item CHASE: 2022
+\end{itemize}
+
+\textit{Conference/Workshop Reviewer}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item UIST: 2025
+    \item CHI Late-Breaking Work: 2024
+    \item CHI: 2024
+    \item CSCW: 2024
+\end{itemize}
+
+\textit{Journal Reviewer}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Transactions on Software Engineering and Methodology (TOSEM): 2023, 2025
+    \item IST (\textit{Regulatory Compliance in Software Engineering}): 2025
+    \item Empirical Software Engineering (EMSE): 2022, 2023, 2023, 2024, 2025
+    \item Communications of the ACM: 2024, 2025
+    \item IEEE Software (\textit{Special Issue on Developing your Software Engineering Career}): 2023
+    \item IEEE Software: 2022
+    \item IEEE Software (\textit{Special Issue Bots in Software Engineering}): 2022
+    \item PeerJ Computer Science: 2021
+    \item TSE: 2021
+\end{itemize}
+
+\textit{Mentorship}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Code the Dream Mentor \& Reviewer: Fall 2025
+\end{itemize}
+
+\textbf{Internal Service}
+
+\textit{Department of Computer Science}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Collegiate Faculty Search Committee: Fall 2025
+    \item Virginia Tech Undergraduate Research in Computer Science (VTURCS): Fall 2025 - present
+    \item Stack@CS Reading Group: Fall 2023 - present
+    \item Undergraduate Program Committee: Fall 2022 - Spring 2025
+    \item Software Engineering PhD Qualifying Exam Committee Chair: 2024
+    \item Software Engineering PhD Qualifying Exam Committee Member: 2022, 2023, 2024
+\end{itemize}
+
+\textit{Virginia Tech}
+\begin{itemize}[noitemsep, topsep=0pt]
+    \item Presidential Postdoctoral Fellowship Reviewer: 2023
+    \item Future Faculty Diversity Program (2020 Cohort)
+\end{itemize}
+
+% \textit{Invited Panels}
+% \begin{itemize}[noitemsep, topsep=0pt]
+%     \item[] Decoding CS Grad School 2021
+% \end{itemize}
 % %------------------------------------------------
+% \begin{subsection}{Program Committee Member}{BotSE 2021}{}{}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{}{December 1, 2020}{Panelist}{Virtual}
+% \end{sSubsection}
+% \vspace{-5pt}
+
+% %------------------------------------------------
+% \begin{sSubsection}{NC State CSC PhD Recruitment Weekend}{Spring 2018, 2019}{Volunteer}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{Bridge to the Doctorate Program}{February 15, 2019}{Graduate Student Panelist}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{Open Source 101}{February 2017, 2018}{Volunteer}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{NC-LSAMP\footnote{North Carolina Louis Stokes Alliance for Minority Participation}}{November 11, 2017}{Undergraduate Research Conference Panelist}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{Red Hat Diversity and Inclusion Week}{July 2017}{``Why Diversity Matters''}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+
 % \begin{sSubsection}{ACM Mid-Atlantic Region Programming Contest}{November 5, 2011}{Volunteer}{Durham, NC}
 % \end{sSubsection}
 % \vspace{-5pt}
 %------------------------------------------------
 \end{rSection}
 
+\begin{rSection}{Presentations and Talks}
 
-%----------------------------------------------------------------------------------------
-%	PRESENTATIONS SECTION
-%----------------------------------------------------------------------------------------
+\textbf{Keynote Speaker}
+\begin{enumerate}[{start=1,label=[K\arabic*]\addtocounter{enumi}{-2}}]
+    \item \textit{International Workshop on Bots and Agents in Software Engineering} (BoatSE 2026). Workshop co-located with ICSE, April 13, 2026. Rio de Janeiro, Brazil.
+\end{enumerate}
 
-\begin{rSection}{Presentations and Invited Talks}
-\begin{rSubsection}{North Carolina State University Three Minute Thesis}{September 24, 2020}{``Digital Nudges for Encouraging Developer Behaviors"}{Virtual}
-\item Participated in the NC State Graduate School Three Minute Thesis (3MT) competition
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{rSubsection}{DevConf.US}{August 15-17, 2019}{``Sorry to Bother You! Effective OSS Recommendations"}{Boston, MA}
-\item Accepted talk presented at DevConf.US 2019 OSS developer community and technology conference
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+\textbf{Invited Meetings}
+\begin{enumerate}[{start=2,label=[M\arabic*]\addtocounter{enumi}{-2}}]
+    \item \textit{International Workshop on Benchmark Infrastructure for LLMs for Code} (BI4LLMC 2025). Invitation-only workshop co-located with FSE, June 26, 2025. Trondheim, Norway.
+    \item \textit{Software Developer Diversity and Inclusion Workshop}. NII Shonan Meeting, June 26-29, 2023. Kanagawa, Japan.
+\end{enumerate}
 
-\begin{rSubsection}{Free Open Source Software Interest Group}{January 25, 2019}{Lightning Talk}{Raleigh, NC}
-\item Presented my research as a lightning talk for the FOSS Interest Group meeting at NC State
-\end{rSubsection}
-\vspace{-5pt}
-%------------------------------------------------
+\textbf{Invited Talks}
+\begin{enumerate}[{start=7,label=[T\arabic*]\addtocounter{enumi}{-2}}]
+    \item \textit{What RSEs Must be Afforded: Better Software through the Right Development Practices and Tools}. Consortium for the Advancement of Scientific Software (CASS) User-Developer Experience Working Group meeting. May 6, 2025. Virtual. 
+    \item \textit{Improving Software Engineering Practices and Experiences}. CCI SWVA Annual Meeting. October 16, 2024. Blacksburg, VA.
+    \item CS\(|\)Source Business Meeting. September 9, 2024. Blacksburg, VA.
+    \item \textit{How to Recommend Tools for Finding and Fixing Software Errors} or \textit{Overcoming the \ul{Un}wise Monkeys of Tool Adoption}. It Will Never Work in Theory (NWiT) session at Strange Loop, September 23, 2022. St. Louis, MO.
+    \item \textit{Sorry to Bother You! Effective OSS Recommendations}. DevConf.US Open Source Community Conference, August 17, 2019. Boston, MA.
+    \item \textit{How to Improve Software Tool Discovery and Usage}. Red Hat QECampX, October 10, 2018. Raleigh, NC.
+    \item \textit{How Software Users Recommend Tools to Each Other}. Laboratory for Analytic Sciences (LAS) Wednesday Research Meeting, November 29, 2017. Raleigh, NC.
+\end{enumerate}
 
-\begin{rSubsection}{Red Hat QECampX}{October 10, 2018}{``How to Improve Software Tool Discovery and Usage"}{Raleigh, NC}
-\item Accepted talk presented at the Red Hat QECampX quality engineering conference
-\end{rSubsection}
-\vspace{-5pt}
+\textbf{Invited Panels}
+\begin{enumerate}[{start=3,label=[I\arabic*]\addtocounter{enumi}{-2}}]
+    \item \textit{VT Academic Jobs Panel}. Virginia Tech CS Grad Council, December 2, 2021. Blacksburg, VA.
+    \item \textit{NC State Career Retreat: Success Stories}. NC State Graduate School Professional Development Team, July 16, 2021. Virtual.
+    \item \textit{Undergraduate Research Conference Panel}. North Carolina Louis Stokes Alliance for Minority Participation (NC-LSAMP) conference. November 11, 2017. Raleigh, NC.
+\end{enumerate}
 
-\begin{rSubsection}{Linux User's Group @ NC State}{February 28, 2018}{Lightning Talk}{Raleigh, NC}
-\item Presented my research as a lightning talk for the Linux User's Group
-\end{rSubsection}
-\vspace{-5pt}
+\textbf{Guest Lectures}
+\begin{enumerate}[{start=1,label=[L\arabic*]\addtocounter{enumi}{-2}}]
+    \item \textit{ASPT-6004: AI in History and Its Social and 
+Environmental Implications}. Virginia Tech, Political Science/Alliance for Social, Political, Ethical, and Cultural Thought (ASPECT). November 12, 2025. Blacksburg, VA.
+\end{enumerate}
 
-\begin{rSubsection}{Intern Expo}{August 2017, 2018}{Red Hat }{Raleigh, NC}
-\item Showcase and demo internship projects to Red Hat employees
-\end{rSubsection}
-\vspace{-5pt}
+\textbf{Miscellaneous Presentations}
+\begin{enumerate}[{start=7,label=[M\arabic*]\addtocounter{enumi}{-2}}]
+    \item PhD: Patiently Hoping for a Degree. \textit{Master Your Future Professional Development Workshop}. Center for the Enhancement of Engineering Diversity (CEED), Virginia Tech. September 17, 2024.
+    \item \textit{New Faculty Hire Conversation w/ Chris Brown}. Office of Postdoctoral Affairs, Virginia Tech. August 9, 2023.
+    \item Engineering Undergraduate Research Seminar (ENGR 1014), Virginia Tech. October 28, 2022.
+    \item Faculty Research Presentation. Graduate Student Recruiting Weekend. Virginia Tech. March 18, 2022.
+    \item \textit{Code World, No Blanket}. Graduate Seminar (CS 5944), Virginia Tech. September 10, 2021.
+    \item Meet the Faculty. Graduate Seminar (CS 5944), Virginia Tech. September 3, 2021.
+      \item \textit{Digital Nudges for Encouraging Developer Behaviors}. NC State Three Minute Thesis (3MT) competition, September 24, 2020. Virtual.  
+\end{enumerate}
 
-\begin{rSubsection}{Laboratory for Analytic Sciences}{November 29, 2017}{Wednesday Research Meeting}{Raleigh, NC}
-\item Invited talk to present my research at the Laboratory for Analytic Sciences' weekly research meeting
-\end{rSubsection}
-\vspace{-5pt}
-
-\begin{rSubsection}{Intern Showcase}{August 2016}{Blackbaud }{Raleigh, NC}
-\item Present the work completed during my internship to Blackbaud interns and employees
-\end{rSubsection}
-%------------------------------------------------
 
 \end{rSection}
-\vspace{-10pt}
-%----------------------------------------------------------------------------------------
-%	CONFERENCES SECTION
-%----------------------------------------------------------------------------------------
-\begin{rSection}{Other Conferences}
-%------------------------------------------------
-\begin{sSubsection}{Future Faculty Diversity Program at Virginia Tech$^*$}{October 4-7, 2020}{}{Virtual}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Red Hat Research Day \textit{Infrastructure Software}}{September 30, 2020}{}{Virtual}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NC State Academic Packways$^*$}{June 4-5, 2020}{}{Virtual}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NC State Virtual Writing Retreat$^*$}{May 4-8, 2020}{}{Virtual}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Open Source 101 at Home$^*$}{May 12, 2020}{}{Virtual}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{All Things Open}{October 2016, 2017, 2018, 2019, 2020}{Red Hat}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{URMD Grad Cohort Workshop}{March 21-23, 2019}{CRA}{Waikoloa Village, HI}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{ESEC/FSE 2018}{November 5-9, 2018}{ACM}{Lake Buena Vista, FL}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NSBC 2018}{August 9-11, 2018}{National Society of Blacks in Computing}{New Orleans, LA}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{Open Source 101}{February 2017, 2018}{Opensource.com}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{NSBC 2017}{June 1-3, 2017}{National Society of Blacks in Computing}{Atlanta, GA}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}{ESEC/FSE 2016}{November 14-18, 2016}{ACM}{Seattle, WA}
-\end{sSubsection}
-\vspace{-5pt}
-%------------------------------------------------
-\begin{sSubsection}
-{LeaderShape}{August 2012}{Duke University}{Sophia, NC}
-\end{sSubsection}
-\vspace{-5pt}
+
+\begin{rSection}{Honors and Awards}
+\item \textbf{CCI Research Showcase} 2025, \textit{Commonwealth Cyber Initiative}
+\item \textbf{Outstanding Mentor Award} 2025, \textit{College of Engineering}
+\item \textbf{Career Champion} 2023, \textit{Virginia Tech Career and Professional Development}
+\item \textbf{Mentor of the Month} August 2023, \textit{Virginia Tech Graduate School}
+
+\item \textbf{Graduate Alumni Advising Award} 2023, \textit{Virginia Tech Graduate School} {\footnotesize [\textit{nominated, did not receive}]}
+
+\item \textbf{Best Paper Awards} VL/HCC 2023 {\footnotesize [\textit{honorable mention}]}, FSE 2022
+
 \end{rSection}
-\blfootnote{* Virtual due to COVID-19}
+
+%----------------------------------------------------------------------------------------
+%	STUDENTS SECTION
+%----------------------------------------------------------------------------------------
+ \begin{rSection}{Advising}
+ 
+ \textbf{PhD Students}
+ %(\textit{Co-advisor}) 
+ 
+\begin{tabular}{ l l }
+ Yoseph Berhanu & Fall 2023 - present \\
+ Arpit Thool & Fall 2023 - present \\
+ Dibyendu Brinto Bose & Spring 2023 - present \\
+ Swanand Vaishampayan & Spring 2023 - present \\
+ Tianjia Wang & Spring 2023 - present \\
+ Hunter Leary & Fall 2022 - present \\
+ Minhyuk Ko & Fall 2022 - present \\
+ Xiaoxiao Gan & Summer 2022 - present \\
+ Shawal Kahlid & Spring 2022 - present
+\end{tabular}
+ 
+\textbf{MS Students}
+  
+  \begin{tabular}{ l l }
+   Aninditaa Chauhan & Summer 2025 - present, expected Spring 2025 \\
+   %\st{Jeffrey Smith & Spring 2022 - present, expected Summer 2024} \\
+   %\footnotesize{* Accelerated BS/Master's program} & \\
+\end{tabular} \\
+
+
+ \normalsize
+ \textbf{Undergraduate Students}
+
+\begin{tabular}{ l l }
+Justin Burns & Fall 2025 \\
+Rishan Biju & Fall 2024-Spring 2025 \\
+Dan McCabe & Fall 2024 \\
+Theo Tran & Fall 2024 \\
+Matthew Trimble & Spring 2024-Fall 2024 \\
+Yasemin Tanyu & Fall 2023-Spring 2024 \\
+\end{tabular} \\
+
+ \normalsize
+ \textbf{Graduated Students}
+
+\begin{tabular}{ l l }
+ Sahar Farzanehpour, MS & Summer 2025 \\
+ James Barber & Spring 2025 \\
+ Peiqing Guo, MS & Spring 2025 \\
+ Swetha Rajeev & Spring 2025 \\
+ Tian-Yu (Edward) Shiung & Spring 2025 \\
+ Huayu Liang, MS & Fall 2024 \\
+ Grace Govan, BS & Spring 2024 \\
+ Md Mahim Haque, MS &  Fall 2023 \\
+ Sahar Farzanehpour, BS & Spring 2023 \\
+ Jenna Krebs, BS & Spring 2023 \\
+ Brian Bell, BS/MS & Spring 2023 \\
+ Lucas Franke, BS/MS & Spring 2023 \\
+ Sean Gruber, MS & Spring 2023 \\
+ Nivishree Palvannan, MS & Spring 2023 \\
+ Ryan Wood, MS & Spring 2023 \\
+ PeiQing Guo, BS & Spring 2022 \\
+
+\end{tabular} \\
+
+% \textbf{Undergraduate Summer Researchers}
+
+% \begin{tabular}{ l l }
+% \end{tabular}
+
+\textit{Multicultural Academic Opportunities Program (MAOP)} \\
+\begin{tabular}{l l}
+Joaquin Tuckett & 2025 \\
+ Rayn Owens (Virginia State) & 2025 \\
+ Travis Chan & 2024 \\
+ Baker Hasan & 2024 \\
+ Javier Ralat & 2024 \\
+ Omer Ahmed & 2023 \\
+ Edwin Lewis II (Morehouse) & 2023 \\
+ Colin Roberts & 2023 \\
+ 
+\end{tabular} \\
+
+ \textit{Center for the Enhancement of Engineering Diversity (CEED) Sponsored Summer Research} \\
+\begin{tabular}{l l}
+ Syeda Afia Hossain & 2024 \\
+\end{tabular} \\
+
+ \normalsize
+\textbf{\faTrophy~Student Awards~\faTrophy}
+
+\begin{tabular}{ l l }
+ Minhyuk Ko & \textit{Aspire! Curiousity Award} \\
+ Xiaoxiao Gan & \textit{2025 Outstanding Instructor of Record} \\
+ Hunter Leary & \textit{Davenport Leadership Scholarship} \\
+ Shawal Khalid & \textit{VL/HCC GC Travel Award} \\
+ Shawal Khalid & \textit{2024 Instructor of Record} \\
+ Yasemin Tanyu & \textit{VTURCS 2024}~\scriptsize{[2nd place]} \\
+ Omer Ahmed & \textit{2024 LSAMP VA---NC Alliance Undergraduate Research Symposium}~\scriptsize{[1st place]}\\
+ Omer Ahmed & \textit{Dr. Wayne Scales Undergraduate Research and Creative Scholarship} \\
+  & \textit{Symposium} \scriptsize{[2nd place]}\\
+ Minhyuk Ko & \textit{VL/HCC Best Short Paper Honorable Mention} \\
+ Shawal Khalid & \textit{Bitshares Fellowship} \\
+ Brian Bell & \textit{New Horizon Graduate Scholar} \\
+\end{tabular} \\
+
+  \textbf{Thesis Advisory Committees} \\
+  (\textit{Student advisor is in italics with graduation year in parentheses.})
+ \begin{itemize}[noitemsep]
+    \item Francis Obeng, PhD (\textit{Dr. Eli Tilevich})
+    \item Sean Chambers, PhD (\textit{Chris Campo-Bowen})
+    \item Tri Pham, PhD (\textit{Dr. Caitlin Kelleher})  [Washington University in St. Louis]
+    \item Leo St. Amour, PhD (\textit{Dr. Eli Tilevich})
+    \item Yeana Bond, PhD (\textit{Dr. Na Meng})
+    \item Tien Nguyen, PhD (\textit{Dr. Muhammad Ali Gulzar})
+    \item Alex Hicks, PhD (\textit{Dr. Cliff Shaffer})
+    \item Taufiq Daryanto, PhD (\textit{Dr. Eugenia Rho})
+    \item Sabaat Haroon, PhD (\textit{Dr. Muhammad Ali Gulzar})
+    \item Provakar Mondal, PhD (\textit{Dr. Eli Tilevich)}
+    \item Md Mahir Asef Kabir, PhD (\textit{Dr. Na Meng}) \\
+    ------------------------------------------------------------------
+    \item Gayatri Bhatambarekar, MS (\textit{Dr. Na Meng} and \textit{Dr. Abhijit Sarkar}, 2025)
+    \item Ananya Prakash, MS (\textit{Dr. Mohammed Seyam}, 2025)
+    \item Rishith Gandham, MS (\textit{Dr. Na Meng}, 2024)
+    \item Miles Frantz, PhD (\textit{Dr. Daphne Yao}, 2024)
+    \item Ashwin Rachha, MS (\textit{Dr. Mohammed Seyam}, 2024)
+    \item Yi Lu, MS (\textit{Dr. Sang Won Lee}, 2024)
+    \item Divyansh Mishra, MS (\textit{Dr. Steve Edwards}, 2023)
+    \item Ming Zhu, PhD (\textit{Dr. Ismini Lourentzou} and \textit{Dr. Daphne Yao}, 2023)
+    \item Juntong Chen, MS (\textit{Dr. Na Meng}, 2022)
+ \end{itemize}
+ \footnotesize{* All students are in the Department of Computer Science at Virginia Tech unless otherwise specified}
+
+\end{rSection}
+
+% %------------------------------------------------
+% \begin{sSubsection}{Future Faculty Diversity Program at Virginia Tech$^*$}{October 4-7, 2020}{}{Virtual}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{Red Hat Research Day \textit{Infrastructure Software}}{September 30, 2020}{}{Virtual}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{NC State Academic Packways$^*$}{June 4-5, 2020}{}{Virtual}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{NC State Virtual Writing Retreat$^*$}{May 4-8, 2020}{}{Virtual}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{Open Source 101 at Home$^*$}{May 12, 2020}{}{Virtual}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{All Things Open}{October 2016, 2017, 2018, 2019, 2020}{Red Hat}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{URMD Grad Cohort Workshop}{March 21-23, 2019}{CRA}{Waikoloa Village, HI}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{ESEC/FSE 2018}{November 5-9, 2018}{ACM}{Lake Buena Vista, FL}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{NSBC 2018}{August 9-11, 2018}{National Society of Blacks in Computing}{New Orleans, LA}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{Open Source 101}{February 2017, 2018}{Opensource.com}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{NSBC 2017}{June 1-3, 2017}{National Society of Blacks in Computing}{Atlanta, GA}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}{ESEC/FSE 2016}{November 14-18, 2016}{ACM}{Seattle, WA}
+% \end{sSubsection}
+% \vspace{-5pt}
+% %------------------------------------------------
+% \begin{sSubsection}
+% {LeaderShape}{August 2012}{Duke University}{Sophia, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
+% \end{rSection}
 %----------------------------------------------------------------------------------------
 %	AWARDS SECTION
 %----------------------------------------------------------------------------------------
-\begin{rSection}{Honors and Awards}
+% \begin{rSection}{Honors and Awards}
 
-\begin{sSubsection}
-{DevConf.US Diversity Travel Scholarship}{June 25, 2019}{Red Hat}{Boston, MA}
-\end{sSubsection}
-\vspace{-5pt}
+% \begin{sSubsection}
+% {DevConf.US Diversity Travel Scholarship}{June 25, 2019}{Red Hat}{Boston, MA}
+% \end{sSubsection}
+% \vspace{-5pt}
 
-\begin{sSubsection}
-{SIGSOFT CAPS NSF Travel Award}{March 27, 2019}{NSF}{(ICSE 2019) Montreal, QC, Canada}
-\end{sSubsection}
-\vspace{-5pt}
+% \begin{sSubsection}
+% {SIGSOFT CAPS NSF Travel Award}{March 27, 2019}{NSF}{(ICSE 2019) Montreal, QC, Canada}
+% \end{sSubsection}
+% \vspace{-5pt}
 
-\begin{sSubsection}
-{Graduate Merit Award}{August 2015}{North Carolina State University}{Raleigh, NC}
-\end{sSubsection}
-\vspace{-5pt}
+% \begin{sSubsection}
+% {Graduate Merit Award}{August 2015}{North Carolina State University}{Raleigh, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
 
-\begin{sSubsection}
-{Goldman Sachs Research Scholar}{Summer 2012}{Goldman Sachs}{Durham, NC}
-\end{sSubsection}
-\vspace{-5pt}
+% \begin{sSubsection}
+% {Goldman Sachs Research Scholar}{Summer 2012}{Goldman Sachs}{Durham, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
 
-\begin{sSubsection}
-{Undergraduate Research Fellowship}{May 2012 - May 2013}{Duke University}{Durham, NC}
-\end{sSubsection}
-\vspace{-5pt}
+% \begin{sSubsection}
+% {Undergraduate Research Fellowship}{May 2012 - May 2013}{Duke University}{Durham, NC}
+% \end{sSubsection}
+% \vspace{-5pt}
 
-\begin{sSubsection}
-{Computing Research Association DREU}{Summer 2011}{Brown University}{Providence, RI}
-\end{sSubsection}
-\vspace{-5pt}
+% \begin{sSubsection}
+% {Computing Research Association DREU}{Summer 2011}{Brown University}{Providence, RI}
+% \end{sSubsection}
+% \vspace{-5pt}
 
-\end{rSection}
-
-
-%----------------------------------------------------------------------------------------
-%	TECHNICAL STRENGTHS SECTION
-% %----------------------------------------------------------------------------------------
-
-% \begin{rSection}{Technical Skills and Organizations}
-% \textbf{Red Hat Enterprise Linux 7 Certified System Administrator} \\
-% \textbf{Organizations:} ACM, IEEE, Python Software Foundation, Linux Foundation, Minority Engineering Graduate Student Association (MEGSA), Free Open Source Software Interest Group (FOSS), Red Hat BUILD (Blacks United in Leadership and Diversity) \\
-% \textbf{Hackathons:} Hacktoberfest 2019, PackHacks 2018, Open Jam 2017, Duke Men's Basketball Hackathon, HackNC 2016, HackDuke 2016, Off the Grid 2016 (Blackbaud) \\
-% \textbf{Programming Languages:} Python, Java, R, Ruby, C\#, C++, C, HTML, JavaScript, SQL \\
-% \textbf{Tools and Technologies:} Git, Ansible, Jenkins, Docker, TravisCI, Linux, Windows, LaTex, Android
 % \end{rSection}
-% \vspace{-8pt}
 
 %----------------------------------------------------------------------------------------
 %	EXAMPLE SECTION
